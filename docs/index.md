@@ -41,7 +41,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
     * &#x1F44D; ESPHome `.yaml` file provided.
     -->
 
-## Specifications (as a Whish List)
+## Specifications (as a wish list)
 
 ### Inputs
 

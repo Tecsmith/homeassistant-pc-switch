@@ -58,11 +58,16 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 * Power Good (from PSU)
 * Power (Supply) ON (from PSU, pin 16 / PS-ON (Pwr Sply On))
 * (PC) Power ON (from MLB, case LED)
+* Optional: via D1 Mini hats
+    * Case temperature
+
 
 ### Outputs
 * Power "relay" *(See note about "relay"'s in ideas below)*
 * Reset "relay"
 * Case LED (as passthrough)
+* Optional: via D1 Mini hats
+    * Contact Relay *(e.g. power to RGB LED's?)*
 
 ##### Terms used above
 * **PSU** = Power Supply (Unit) <br/>

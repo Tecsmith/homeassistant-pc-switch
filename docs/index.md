@@ -28,8 +28,8 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 ### Inputs
 
-1. Power Standby (from PSU pin 9 / +5V SB (Standby)) - *as source of operating +5V power*
-2. Power Good (from PSU, pin 8 / PG (Pwr Good))
+1. Power Standby (from PSU pin 9 {purple} / +5V SB (Standby)) - *as source of operating +5V power*
+2. Power Good (from PSU, pin 8 {gray} / PG (Pwr Good))
 3. Power Supply ON (from PSU)
 4. PC ON (form Case LED)
 5. Case / MLB POWER Button
@@ -39,7 +39,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 ### Sensors (exposed to HA)
 
 * Power Good (from PSU)
-* Power (Supply) ON (from PSU, pin 16 / PS-ON (Pwr Sply On))
+* Power (Supply) ON (from PSU, pin 16 {green} / PS-ON (Pwr Sply))
 * (PC) Power ON (from MLB, case LED)
 * Optional: via D1 Mini hats
     * Case temperature
@@ -58,7 +58,9 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 ## Ideas
 
-* "Relay" should be an [Optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html), or an [Op-amp Comparator](https://www.electronics-tutorials.ws/opamp/op-amp-comparator.html)
+* "Sensor" should be isolated from circuit with an [Op-amp Comparator](https://www.electronics-tutorials.ws/opamp/op-amp-comparator.html) circuit.
+
+* "Relay" should be an [Optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)
     * Do **<u>not</u>** use a transistor, nor a mechanical relay
 
 * "Relay" delay should not be software based

@@ -73,14 +73,14 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
     3 possible ways to do this:
 
-    1. EE solution with caps and transistors - *not really viable since once its variable performance and unchangable nature. (See [here](https://www.homemade-circuits.com/simple-delay-timer-circuits-explained/))*
+    1. EE solution with caps and transistors - *not really viable since because of its variable performance and unchangeable nature. (See [here](https://www.homemade-circuits.com/simple-delay-timer-circuits-explained/))*
 
-    2. If Software solution (i.e. on ESPHome or Tasmota), then how do we crate a **"One-Shot" Normally-Open** switch?
+    2. If Software solution (i.e. on ESPHome or Tasmota), then how do we create a **"One-Shot" Normally-Open** switch?
 
         * ESPHome, can do this inside Home Assistant with an automation trigger using an "`action`" > "`sequence`".
         * Tasmota, can do this with "*Rules*" on the device.
 
-        But, what if the user forgets to "modify" the default f/w or build the HA automation required?  The device ***<u>must</u>*** handle the one-shot itself.
+        But, what if the user forgets to "modify" the default f/w or build the HA automation required?  The device ***<u>must</u>*** handle the one-shot functionally itself.
 
         &#x26A0; Custom f/w (or fork of) must be built for timed "one-shot" / "delay off" functionality.
 

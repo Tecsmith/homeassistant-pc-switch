@@ -21,25 +21,8 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 * `SilverFire` *@Github* - [esp8266-pc-power-control](https://github.com/SilverFire/esp8266-pc-power-control/)
 * Lerk - [Turning a PC on and off using an ESP8266](https://lerks.blog/p/turning-a-pc-on-and-off-using-an-esp)
 * Zvonko Bockaj *@Hackster* - [WEMOS ESP8266 Remote PC Switch](https://www.hackster.io/zvonko-bockaj/wemos-esp8266-remote-pc-switch-062c7a)
-    <!--
-    * &#x1F44D; Based on WEMOS D1 mini module
-    * &#x1F44D; ON state sensor (using case header LED)
-    * &#x1F44E; NPN Transistor based switch
-    * &#x1F44E; Custom Arduino code, generating custom MQTT
-    -->
 * `ajfriesen` - [The pc-switch](https://www.ajfriesen.com/pc-switch/)
-    <!--
-    * &#x1F44D; Based on WEMOS D1 mini module
-    * &#x1F44D; Photocoupler based based switch
-    * &#x1F44D; ESPHome `.yaml` file provided.
-    -->
 * `Erriez` *@Github* - [ESPHomePCPowerControlHomeAssistant](https://github.com/Erriez/ESPHomePCPowerControlHomeAssistant/)
-    <!--
-    * &#x1F44E; Based on NodeMCU module
-    * &#x1F44E; NPN Amplifier Transistor based switch
-    * &#x1F44E; No passthrough for power and reset switch
-    * &#x1F44D; ESPHome `.yaml` file provided.
-    -->
 
 ## Specifications (as a wish list)
 

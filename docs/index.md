@@ -30,17 +30,19 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 1. Power Standby (from PSU pin 9 {purple} / +5V SB (Standby)) - *as source of operating +5V power*
 2. Power Good (from PSU, pin 8 {gray} / PG (Pwr Good))
-3. Power Supply ON (from PSU)
+3. Power Supply ON (from PSU, pins 21,22 {red} )
 4. PC ON (form Case LED)
 5. Case / MLB POWER Button
 6. Case / MLB Reset Button
-7. GND (2x sources from PSU & MLB)
+
+* GND (2x sources from PSU & MLB)
 
 ### Sensors (exposed to HA)
 
-* Power Good (from PSU)
-* Power (Supply) ON (from PSU, pin 16 {green} / PS-ON (Pwr Sply))
-* (PC) Power ON (from MLB, case LED)
+* Power Good (from PSU, pin 8 {gray, *measure `true` when +5V*})
+* Power (Supply) ON (from PSU, pin 16 {green, *measure `false` when +5V* } / PS-ON (Pwr Sply switch))
+    * *This is the pin that need to be grounded for the PSU to switch on, so needs careful testing to make sure one does not have false ON states.*
+* (PC) Power ON (from MLB, case LED) {*measure `true` when +5V*}
 * Optional: via D1 Mini hats
     * Case temperature
 
@@ -63,9 +65,29 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 * "Relay" should be an [Optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)
     * Do **<u>not</u>** use a transistor, nor a mechanical relay
 
-* "Relay" delay should not be software based
+* &#x26A0; "Relay" should be of "Delay OFF type", and 2 must be provided
     * 300ms delay from ON back to OFF to simulate a "press".
     * 5.5s delay on ON, then back to OFF to simulate a "long press".
+
+    <img src="assets/img/one-shot-normally-open.png" width="50%" height="50%"><br/>
+
+    3 possible ways to do this:
+
+    1. EE solution with caps and transistors - *not really viable since once its variable performance and unchangable nature. (See [here](https://www.homemade-circuits.com/simple-delay-timer-circuits-explained/))*
+
+    2. If Software solution (i.e. on ESPHome or Tasmota), then how do we crate a **"One-Shot" Normally-Open** switch?
+
+        * ESPHome, can do this inside Home Assistant with an automation trigger using an "`action`" > "`sequence`".
+        * Tasmota, can do this with "*Rules*" on the device.
+
+        But, what if the user forgets to "modify" the default f/w or build the HA automation required?  The device ***<u>must</u>*** handle the one-shot itself.
+
+        &#x26A0; Custom f/w (or fork of) must be built for timed "one-shot" / "delay off" functionality.
+
+    3. Usa a second MCU with a timing circuit - e.g. ATtiny85
+
+        * May be useful as a feedback "sensor".
+        * Don't forget to provide programming headers.
 
 * Tap into the PSU ATX Cable for power and PSU inputs
     * Std ATX <br/>

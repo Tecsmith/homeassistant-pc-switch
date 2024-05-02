@@ -1,4 +1,4 @@
-# <img src="assets/img/logo.svg" width="48" width="48"></img> Home Assistant PC Switch
+# <img src="assets/img/logo.svg" width="48" width="48" /> Home Assistant PC Switch
 
 **Control your PC from Home Assistant using [ESPHome](https://github.com/esphome/esphome) or [Tasmota](https://github.com/arendst/Tasmota), and integrated into [Home Assistant](https://www.home-assistant.io/).**
 

@@ -67,7 +67,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 * Tap into the PSU ATX Cable for power and PSU inputs
     * Std ATX <br/>
-        <img src="assets/img/atx_pinout.png" height="33.3%" width="33.3%"/>
+        <img src="assets/img/atx_pinout.png" height="50%" width="50%"/>
     * Use a ATX power extender to "tap" into correct cables <br/>
         <img src="assets/img/atx_adapter.png" height="33.3%" width="33.3%"/>
 
@@ -79,8 +79,8 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 * Build the PCB in a way that the unit can attach to a **PCI Slot Bracket Cover**, specifically build for:
     * PCI Slot Fan Mount Rack for video card for 90mm and 120mm fans <br/>
-      <img src="assets/img/slot-fan-bracket.png" height="33.3%" width="33.3%">
+      <img src="assets/img/slot-fan-bracket.png" height="50%" width="50%">
     * PCI Slot for 2.5inch hard drive, rear panel mount <br/>
-      <img src="assets/img/slot-hdd-caddy.png" height="33.3%" width="33.3%">
+      <img src="assets/img/slot-hdd-caddy.png" height="50%" width="50%">
 
     Will allow for drilling holes for external antenna.

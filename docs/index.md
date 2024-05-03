@@ -33,7 +33,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 1. Power Standby (from PSU pin 9 {purple} / +5V SB (Standby)) - *as source of operating +5V power*
 2. Power Good (from PSU, pin 8 {gray} / PG (Pwr Good))
 3. Power Supply ON (from PSU, pins 21,22 {red} )
-4. PC ON (form Case LED)
+4. PC ON (from Case LED)
 5. Case / MLB POWER Button
 6. Case / MLB Reset Button
 
@@ -66,7 +66,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 * ~~"Relay" should be an [Optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)~~
     * ~~Do **<u>not</u>** use a transistor, nor a mechanical relay~~
-    * [**`UPDATE`**: Some PC's have "Positive" switches, others have "Negative" switches.  Accounting for this is too complex (i.e. prone to installer error), so it will be better to use a *surface mount relay* (e.g. Omron G6K [SMD @ &#xB1;$7], or Ningbo Songle `SRD-5VDC-SL-C` [THD @ &#xB1;$0.36&#xA2;] ).]
+    * [**`UPDATE`**: Some PC's have "Positive" switches, others have "Negative" switches.  Accounting for this is too complex (i.e. prone to installer error), so it will be better to use a * relay* (e.g. Omron G6K [SMD @ &#xB1;$7], or Songle `SRD-3VDC-SL-C` / Omrom G5LE [THD @ &#xB1;$0.36&#xA2;] ).]
 
 * &#x26A0; "Relay" should be driven by a "Delay OFF type" circuit, and 2 timings must be provided
     * 300ms delay from ON back to OFF to simulate a "press".

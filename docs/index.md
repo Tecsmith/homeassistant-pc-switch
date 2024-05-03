@@ -6,6 +6,8 @@
 
 **`STATUS`**: This project is in ideation stage.  Come back soon for progress.
 
+**`LAST UPDATE`**: 3 May 2024
+
 ---
 
 > *"A good scientist is a person with original ideas. A good engineer is a person who makes a design that works with as few original ideas as possible. There are no prima donnas in engineering."* -- Freeman Dyson
@@ -84,7 +86,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
         &#x26A0; Custom f/w (or fork of) must be built for timed "one-shot" / "delay off" functionality.
 
-    3. Usa a second MCU with a timing circuit - e.g. ATtiny85
+    3. Usa a second MCU with a timing circuit - e.g. ATtiny85 or **STM8S001J3**
 
         * May be useful as a feedback "sensor".
         * Don't forget to provide programming headers.

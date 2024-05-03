@@ -62,12 +62,13 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 ## Ideas
 
-* "Sensor" should be isolated from circuit with an [Op-amp Comparator](https://www.electronics-tutorials.ws/opamp/op-amp-comparator.html) circuit.
+* "Sensor" should be isolated from circuit with an ~~[Op-amp Comparator](https://www.electronics-tutorials.ws/opamp/op-amp-comparator.html) or~~ [Level Shifter](https://www.sparkfun.com/products/12009) circuit.  *(Inputs will be 5V, whilst the ESPxx works on 3.3v.)*
 
-* "Relay" should be an [Optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)
-    * Do **<u>not</u>** use a transistor, nor a mechanical relay
+* ~~"Relay" should be an [Optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)~~
+    * ~~Do **<u>not</u>** use a transistor, nor a mechanical relay~~
+    * [**`UPDATE`**: Some PC's have "Positive" switches, others have "Negative" switches.  Accounting for this is too complex (i.e. prone to installer error), so it will be better to use a *surface mount relay* (e.g. Omron G6K [SMD @ &#xB1;$7], or Ningbo Songle `SRD-5VDC-SL-C` [THD @ &#xB1;$0.36&#xA2;] ).]
 
-* &#x26A0; "Relay" should be of "Delay OFF type", and 2 must be provided
+* &#x26A0; "Relay" should be driven by a "Delay OFF type" circuit, and 2 timings must be provided
     * 300ms delay from ON back to OFF to simulate a "press".
     * 5.5s delay on ON, then back to OFF to simulate a "long press".
 
@@ -110,3 +111,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
       <img src="assets/img/slot-hdd-caddy.png" height="50%" width="50%">
 
     Will allow for drilling holes for external antenna.
+
+---
+
+Made with &#x1F499; by [<img src="assets/img/vino-face.svg" width="17" height="17"/>](https://github.com/vinorodrigues).

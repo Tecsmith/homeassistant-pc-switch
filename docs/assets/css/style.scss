@@ -2,17 +2,19 @@
 ---
 
 @import "{{ site.theme }}";
-@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@400,700&display=swap');
 @import url('https://fonts.cdnfonts.com/css/cascadia-code');
 
 body {
-    font-family: "Gloria Hallelujah", Geneva, Verdana, sans-serif;
+    font-family: "Ubuntu Sans", Geneva, Verdana, sans-serif;
     font-weight: 400;
     font-style: normal;    
 }
 
 code, pre {
     font-family: 'Cascadia Code', 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-style: normal;    
 }
 
 footer small {

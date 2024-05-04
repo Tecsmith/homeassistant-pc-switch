@@ -73,7 +73,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
         The issue here is that the MLB *(PC Motherboard)* may be using a low-sensing circuit, or a high-sensing circuit - and this PCB must account for both!
 
-        <img src="assets/img/high_vs_low_sensing.png" width="67%" height="67%"><br/>
+        <img src="assets/img/high_vs_low_sensing.png" /><br/>
 
         All we get access to is the points that are the pins of the switch.
 
@@ -81,7 +81,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
     * 300ms delay from ON back to OFF to simulate a "press".
     * 5.5s delay on ON, then back to OFF to simulate a "long press".
 
-        <img src="assets/img/one-shot-normally-open.png" width="67%" height="67%"><br/>
+        <img src="assets/img/one-shot-normally-open.png" width="67%" height="67%" /><br/>
 
     3 possible ways to do this:
 
@@ -106,9 +106,9 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 * Tap into the PSU ATX Cable for power and PSU inputs
     * Std ATX <br/>
-        <img src="assets/img/atx_pinout.png" height="50%" width="50%"/>
+        <img src="assets/img/atx_pinout.png" height="50%" width="50%" />
     * Use a ATX power extender to "tap" into correct cables <br/>
-        <img src="assets/img/atx_adapter.png" height="33.3%" width="33.3%"/>
+        <img src="assets/img/atx_adapter.png" height="33.3%" width="33.3%" />
 
 * Use the WEMOS D1 Mini form-factor and pin-outs, but prototype on:
     * [WEMOS D1 Mini Pro](https://www.aliexpress.com/item/1005006109635545.html) (with external antenna) <br/>
@@ -118,12 +118,12 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 * Build the PCB in a way that the unit can attach to a **PCI Slot Bracket Cover**, specifically build for:
     * PCI Slot Fan Mount Rack for video card for 90mm and 120mm fans <br/>
-      <img src="assets/img/slot-fan-bracket.png" height="50%" width="50%">
+      <img src="assets/img/slot-fan-bracket.png" height="50%" width="50%" />
     * PCI Slot for 2.5inch hard drive, rear panel mount <br/>
-      <img src="assets/img/slot-hdd-caddy.png" height="50%" width="50%">
+      <img src="assets/img/slot-hdd-caddy.png" height="50%" width="50%" />
 
     Will allow for drilling holes for external antenna.
 
 ---
 
-Made with &#x1F499; by [<img src="assets/img/vino-face.svg" width="17" height="17"/>](https://github.com/vinorodrigues).
+Made with &#x1F499; by [<img src="assets/img/vino-face.svg" width="16" height="16" />](https://github.com/vinorodrigues).

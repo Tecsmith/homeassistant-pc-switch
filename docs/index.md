@@ -73,7 +73,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
         The issue here is that the MLB *(PC Motherboard)* may be using a low-sensing circuit, or a high-sensing circuit - and this PCB must account for both!
 
-        <img src="assets/img/high_vs_low_sensing.png" width="50%" height="50%"><br/>
+        <img src="assets/img/high_vs_low_sensing.png" width="67%" height="67%"><br/>
 
         All we get access to is the points that are the pins of the switch.
 
@@ -81,7 +81,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
     * 300ms delay from ON back to OFF to simulate a "press".
     * 5.5s delay on ON, then back to OFF to simulate a "long press".
 
-        <img src="assets/img/one-shot-normally-open.png" width="50%" height="50%"><br/>
+        <img src="assets/img/one-shot-normally-open.png" width="67%" height="67%"><br/>
 
     3 possible ways to do this:
 

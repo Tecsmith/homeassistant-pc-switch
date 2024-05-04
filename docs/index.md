@@ -6,7 +6,7 @@
 
 **`STATUS`**: This project is in ideation stage.  Come back soon for progress.
 
-**`LAST UPDATE`**: 3 May 2024
+**`LAST UPDATE`**: 4 May 2024 `// May the force be with you`
 
 ---
 
@@ -20,11 +20,14 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 ### Other People's Projects
 
+* Zvonko Bockaj *@Hackster* - [WEMOS ESP8266 Remote PC Switch](https://www.hackster.io/zvonko-bockaj/wemos-esp8266-remote-pc-switch-062c7a) `// this one makes most sense`
+* `ajfriesen` - [The pc-switch](https://www.ajfriesen.com/pc-switch/) `// great source for ESPHome YAML example`
+* `Erriez` *@Github* - [ESPHomePCPowerControlHomeAssistant](https://github.com/Erriez/ESPHomePCPowerControlHomeAssistant/) `// ditto`
+
+&
+
 * `SilverFire` *@Github* - [esp8266-pc-power-control](https://github.com/SilverFire/esp8266-pc-power-control/)
 * Lerk - [Turning a PC on and off using an ESP8266](https://lerks.blog/p/turning-a-pc-on-and-off-using-an-esp)
-* Zvonko Bockaj *@Hackster* - [WEMOS ESP8266 Remote PC Switch](https://www.hackster.io/zvonko-bockaj/wemos-esp8266-remote-pc-switch-062c7a)
-* `ajfriesen` - [The pc-switch](https://www.ajfriesen.com/pc-switch/)
-* `Erriez` *@Github* - [ESPHomePCPowerControlHomeAssistant](https://github.com/Erriez/ESPHomePCPowerControlHomeAssistant/)
 
 ## Specifications (as a wish list)
 
@@ -64,15 +67,21 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 * "Sensor" should be isolated from circuit with an ~~[Op-amp Comparator](https://www.electronics-tutorials.ws/opamp/op-amp-comparator.html) or~~ [Level Shifter](https://www.sparkfun.com/products/12009) circuit.  *(Inputs will be 5V, whilst the ESPxx works on 3.3v.)*
 
-* ~~"Relay" should be an [Optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)~~
+* "Relay" should be an [Optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)
     * ~~Do **<u>not</u>** use a transistor, nor a mechanical relay~~
-    * [**`UPDATE`**: Some PC's have "Positive" switches, others have "Negative" switches.  Accounting for this is too complex (i.e. prone to installer error), so it will be better to use a * relay* (e.g. Omron G6K [SMD @ &#xB1;$7], or Songle `SRD-3VDC-SL-C` / Omrom G5LE [THD @ &#xB1;$0.36&#xA2;] ).]
+    * [**`UPDATE`**: Some PC's have "Positive" switches, others have "Negative" switches.  Accounting for this is too complex *(i.e. prone to installer error)*, so would it be better to use a * relay* *(e.g. Omron G6K [SMD @ &#xB1;$7], or Songle `SRD-3VDC-SL-C` / Omrom G5LE [THD @ &#xB1;$0.36&#xA2;] )*.]
+
+        The issue here is that the MLB *(PC Motherboard)* may be using a low-sensing circuit, or a high-sensing circuit - and this PCB must account for both!
+
+        <img src="assets/img/high_vs_low_sensing.png" width="50%" height="50%"><br/>
+
+        All we get access to is the points that are the pins of the switch.
 
 * &#x26A0; "Relay" should be driven by a "Delay OFF type" circuit, and 2 timings must be provided
     * 300ms delay from ON back to OFF to simulate a "press".
     * 5.5s delay on ON, then back to OFF to simulate a "long press".
 
-    <img src="assets/img/one-shot-normally-open.png" width="50%" height="50%"><br/>
+        <img src="assets/img/one-shot-normally-open.png" width="50%" height="50%"><br/>
 
     3 possible ways to do this:
 
@@ -80,8 +89,11 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
     2. If Software solution (i.e. on ESPHome or Tasmota), then how do we create a **"One-Shot" Normally-Open** switch?
 
-        * ESPHome, can do this inside Home Assistant with an automation trigger using an "`action`" > "`sequence`".
+        * ESPHome, can do this with with a [`on_turn_on` trigger](https://esphome.io/components/switch/gpio.html#momentary-switch).
+        
         * Tasmota, can do this with "*Rules*" on the device.
+
+        * Home Assistant with an automation trigger using an "`action`" > "`sequence`".
 
         But, what if the user forgets to "modify" the default f/w or build the HA automation required?  The device ***<u>must</u>*** handle the one-shot functionally itself.
 

@@ -116,6 +116,11 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
     * [LOLIN ESP32 S2 Mini](https://www.aliexpress.com/item/1005006157693055.html) <br/>
       <img src="assets/img/esp32-s2-mini .png" height="33.3%" width="33.3%" />
 
+* [**`UPDATE`**: &#x1F92F;] Also add a footprint for the **ESP-12F**/ESP-12S module
+    * Cheaper, but needs external programmer (add headers for that).
+
+      <img src="assets/img/esp-12f.png" width="25%" height="25%" />
+
 * Build the PCB in a way that the unit can attach to a **PCI Slot Bracket Cover**, specifically build for:
     * PCI Slot Fan Mount Rack for video card for 90mm and 120mm fans <br/>
       <img src="assets/img/slot-fan-bracket.png" height="50%" width="50%" />

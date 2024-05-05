@@ -1,12 +1,12 @@
-# <img src="assets/img/logo.svg" width="48" width="48" /> Home Assistant PC Switch
+# <img src="assets/img/logo.svg" width="48" width="48" /> HA PC Switch
 
-**Control your PC from Home Assistant using [ESPHome](https://github.com/esphome/esphome) or [Tasmota](https://github.com/arendst/Tasmota), and integrated into [Home Assistant](https://www.home-assistant.io/).**
+**Automate power on your PC using [ESPHome](https://github.com/esphome/esphome) or [Tasmota](https://github.com/arendst/Tasmota), and integrated into [Home Assistant](https://www.home-assistant.io/).**
 
 ---
 
 **`STATUS`**: This project is in ideation stage.  Come back soon for progress.
 
-**`LAST UPDATE`**: 4 May 2024 `// May the force be with you`
+**`LAST UPDATE`**: 5 May 2024
 
 ---
 
@@ -49,7 +49,9 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
     * *This is the pin that need to be grounded for the PSU to switch on, so needs careful testing to make sure one does not have false ON states.*
 * (PC) Power ON (from MLB, case LED) {*measure `true` when +5V*}
 * Optional: via D1 Mini hats
-    * Case temperature
+    * *(e.g. Case temperature)*
+    * expose D1 and D2 pins ...
+    * ... or as I2C bus
 
 
 ### Outputs
@@ -57,7 +59,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 * Reset "relay"
 * Case LED (as passthrough)
 * Optional: via D1 Mini hats
-    * Contact Relay *(e.g. power to RGB LED's?)*
+    *(e.g. Contact Relay, as power to RGB LED's switch)*
 
 ##### Terms used above
 * **PSU** = Power Supply (Unit) <br/>

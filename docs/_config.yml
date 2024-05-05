@@ -1,5 +1,5 @@
-title: Home Assistant PC Switch
-description: Control your PC from Home Assistant using EPSHome or Tasmota.
+title: HA PC Switch
+description: Automate power on your PC using ESPHome or Tasmota, and integrated into Home Assistant.
 logo: /assets/img/logo.png
 
 google_analytics:

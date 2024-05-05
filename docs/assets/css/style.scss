@@ -2,25 +2,27 @@
 ---
 
 @import "{{ site.theme }}";
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@400,700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/cascadia-code');
 
 html {
     zoom: 120%;
 }
 
 body {
-    font-family: "Ubuntu Sans", Geneva, Verdana, sans-serif;
-    font-weight: 400;
-    font-style: normal;    
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 }
 
-code, pre {
-    font-family: 'Cascadia Code', 'Courier New', Courier, monospace;
-    font-weight: 400;
-    font-style: normal;    
+code, pre, tt {
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
 }
 
 footer small {
+    // Hide GitHub branding
     visibility: hidden;
+}
+
+ol li img,
+ul li img {
+    /* Center all images */
+    display: block;
+    margin: auto 0;
 }

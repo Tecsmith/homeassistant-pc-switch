@@ -71,13 +71,14 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 * "Relay" should be an [Optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)
     * ~~Do **<u>not</u>** use a transistor, nor a mechanical relay~~
-    * [**`UPDATE`**: Some PC's have "Positive" switches, others have "Negative" switches.  Accounting for this is too complex *(i.e. prone to installer error)*, so would it be better to use a * relay* *(e.g. Omron G6K [SMD @ &#xB1;$7], or Songle `SRD-3VDC-SL-C` / Omrom G5LE [THD @ &#xB1;$0.36&#xA2;] )*.]
+    * Some PC's have "Positive" switches, others have "Negative" switches.  Accounting for this is too complex *(i.e. prone to installer error)*, so would it be better to use a * relay* *(e.g. Omron G6K [SMD @ &#xB1;$7], or Songle `SRD-3VDC-SL-C` / Omrom G5LE [THD @ &#xB1;$0.36&#xA2;] )*.
 
         The issue here is that the MLB *(PC Motherboard)* may be using a low-sensing circuit, or a high-sensing circuit - and this PCB must account for both!
 
         <img src="assets/img/high_vs_low_sensing.png" /><br/>
 
         All we get access to is the points that are the pins of the switch.
+    * Solution looks to be a TIP3123 opto-mosfet, thanks to [Andy aka](https://electronics.stackexchange.com/questions/548380/how-is-it-possible-to-replace-a-relay-with-transistors).
 
 * &#x26A0; "Relay" should be driven by a "Delay OFF type" circuit, and 2 timings must be provided
     * 300ms delay from ON back to OFF to simulate a "press".

@@ -314,6 +314,9 @@ UsedLibrary="/Users/vino/Documents/EAGLE/libraries/ts-eagle-lib-symlink-a/ts_dev
 UsedLibrary="/Users/vino/Documents/EAGLE/libraries/Other/ST Microelctronics_By_element14_Batch_1.lbr"
 UsedLibrary="/Users/vino/Documents/EAGLE/libraries/ts-eagle-lib-symlink-a/ts_custom_nick_nacks.lbr"
 UsedLibrary="/Users/vino/Documents/EAGLE/libraries/ts-eagle-lib-symlink-a/random_logos.lbr"
+UsedLibrary="/Users/vino/dev/tecsmith/ts-eagle-lib/ts_jumpers.lbr"
+UsedLibrary="/Users/vino/Documents/EAGLE/libraries/ts-eagle-lib-symlink-a/stm32c0.lbr"
+UsedLibrary="/Users/vino/Documents/EAGLE/libraries/ts-eagle-lib-symlink-a/ts_jumpers.lbr"
 
 [Win_1]
 Type="Control Panel"

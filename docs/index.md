@@ -34,7 +34,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 ### Inputs
 
 1. Power Standby (from PSU pin 9 {purple} / +5V SB (Standby)) - *as source of operating +5V power*
-2. Power Good (from PSU, pin 8 {gray} / PG (Pwr Good))
+2. Power Good (from PSU, pin 8 {grey} / PG (Pwr Good))
 3. Power Supply ON (from PSU, pins 21,22 {red} )
 4. PC ON (from Case LED)
 5. Case / MLB POWER Button
@@ -44,7 +44,7 @@ Looking for a way to remotely start-up and shut-down a PC from Home Assistant.  
 
 ### Sensors (exposed to HA)
 
-* Power Good (from PSU, pin 8 {gray, *measure `true` when +5V*})
+* Power Good (from PSU, pin 8 {grey, *measure `true` when +5V*})
 * Power (Supply) ON (from PSU, pin 16 {green, *measure `false` when +5V* } / PS-ON (Pwr Sply switch))
     * *This is the pin that need to be grounded for the PSU to switch on, so needs careful testing to make sure one does not have false ON states.*
 * (PC) Power ON (from MLB, case LED) {*measure `true` when +5V*}

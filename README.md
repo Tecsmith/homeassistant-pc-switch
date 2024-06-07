@@ -8,7 +8,7 @@ For more, visit the project page here: https://tecsmith.github.io/homeassistant-
 
 ## Assets:
 
-* [Schematic PDF](docs/ha-pc-switch-revA.pdf)
+* [Schematic PDF](docs/ha-pc-switch-revB.pdf)
 
 ---
 

@@ -79,7 +79,7 @@ So I'm progressing with building ... EE design is done, but I need to change foc
 * ~~Optional: via D1 Mini hats~~
     ~~*(e.g. Contact Relay, as power to RGB LED's switch)*~~
 
-[June '24 Update] - Solid state / MOSDEF relays are still in.  Addon outputs are however dropped.  But... I2C is exposed as a single QWICC connector in case one wants to extend.
+[June '24 Update] - Solid state / MOSFET relays are still in.  Addon outputs are however dropped.  But... I2C is exposed as a single QWICC connector in case one wants to extend.
 
 ##### Terms used above
 * **PSU** = Power Supply (Unit) <br/>
@@ -91,14 +91,16 @@ So I'm progressing with building ... EE design is done, but I need to change foc
 
 * "Relay" should be an [Optocoupler](https://www.electronics-tutorials.ws/blog/optocoupler.html)
     * ~~Do **<u>not</u>** use a transistor, nor a mechanical relay~~
-    * Some PC's have "Positive" switches, others have "Negative" switches.  Accounting for this is too complex *(i.e. prone to installer error)*, so would it be better to use a * relay* *(e.g. Omron G6K [SMD @ &#xB1;$7], or Songle `SRD-3VDC-SL-C` / Omrom G5LE [THD @ &#xB1;$0.36&#xA2;] )*.
+
+    * Some PC's have "Positive" switches, others have "Negative" switches.  Accounting for this is too complex *(i.e. prone to installer error)*, so would it be better to use a ~~*relay* *(e.g. Omron G6K [SMD @ &#xB1;$7], or Songle `SRD-3VDC-SL-C` / Omrom G5LE [THD @ &#xB1;$0.36&#xA2;] )*~~.
 
         The issue here is that the MLB *(PC Motherboard)* may be using a low-sensing circuit, or a high-sensing circuit - and this PCB must account for both!
 
         <img src="assets/img/high_vs_low_sensing.png" /><br/>
 
         All we get access to is the points that are the pins of the switch.
-    * Solution looks to be a TIP3123 opto-mosfet, thanks to [Andy aka](https://electronics.stackexchange.com/questions/548380/how-is-it-possible-to-replace-a-relay-with-transistors).
+
+    * Solution looks to be a TIP3123 opto-MOSFET, thanks to [Andy aka](https://electronics.stackexchange.com/questions/548380/how-is-it-possible-to-replace-a-relay-with-transistors).
 
 * &#x26A0; "Relay" should be driven by a "Delay OFF type" circuit, and 2 timings must be provided
     * 300ms delay from ON back to OFF to simulate a "press".
@@ -122,15 +124,15 @@ So I'm progressing with building ... EE design is done, but I need to change foc
 
         &#x26A0; Custom f/w (or fork of) must be built for timed "one-shot" / "delay off" functionality.
 
-    3. Usa a second MCU with a timing circuit - e.g. ATtiny85 or **STM8S001J3**
+    3. Usa a second MCU with a timing circuit - e.g. ~~ATtiny85 or **STM8S001J3**~~ or **STM32C0**.
 
         * May be useful as a feedback "sensor".
         * Don't forget to provide programming headers.
 
-* Tap into the PSU ATX Cable for power and PSU inputs
-    * Std ATX <br/>
+* ~~Tap into the PSU ATX Cable for power and PSU inputs~~
+    * ~~Std ATX~~ <br/>
         <img src="assets/img/atx_pinout.png" height="50%" width="50%" />
-    * Use a ATX power extender to "tap" into correct cables <br/>
+    * ~~Use a ATX power extender to "tap" into correct cables~~ <br/>
         <img src="assets/img/atx_adapter.png" height="33.3%" width="33.3%" />
 
 * ~~Use the WEMOS D1 Mini form-factor and pin-outs, but prototype on:~~
